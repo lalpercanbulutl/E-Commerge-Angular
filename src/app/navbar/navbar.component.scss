@@ -1,0 +1,9 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 2px solid rgb(186, 186, 186);
+  padding: 18px;
+  background-color: rgb(72, 73, 75);
+  margin: 0 auto; /* Center the navbar horizontally */
+}

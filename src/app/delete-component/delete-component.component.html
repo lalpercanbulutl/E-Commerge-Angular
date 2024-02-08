@@ -1,0 +1,11 @@
+<!-- delete.component.html -->
+<div class="container">
+  <h1>Bu ürünü silmek istediğinizden emin misiniz: {{ dialogData.title }}</h1>
+  <p>{{ dialogData.message }}</p>
+  <div style="display: flex; justify-content: space-around; margin-top: 20px">
+    <button mat-raised-button color="primary" (click)="close(true)">
+      Evet
+    </button>
+    <button mat-raised-button color="warn" (click)="close(false)">Hayır</button>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+<div class="container">
+  @for (product of products; track $index) {
+  <div
+    class="card"
+    style="flex-basis: 25%; margin: 10px; display: flex; flex-direction: column"
+  >
+    <div style="padding: 12px; flex: 1">
+      <mat-card-header>
+        <div style="text-align: center">
+          <strong style="font-weight: bold">{{ product.title }}</strong>
+        </div>
+
+        <div style="text-align: center">Category: {{ product.category }}</div>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="{{ product.image }}"
+        alt="Product Image"
+        style="height: 300px; width: 300px; margin-bottom: 10px"
+      />
+      <div>
+        <p>{{ product.description }}</p>
+      </div>
+    </div>
+    <div
+      style="display: flex; gap: 10px; justify-content: center; padding: 10px"
+    >
+      <button mat-button disabled>{{ product.price }} $</button>
+      <button mat-raised-button color="primary">BUY</button>
+      <button mat-raised-button color="warning" (click)="openDialog(product)">
+        INFO
+      </button>
+      <button
+        mat-raised-button
+        color="warn"
+        (click)="openDeleteDialog(product)"
+      >
+        DELETE
+      </button>
+    </div>
+  </div>
+  }
+</div>
+
+<!-- <div class="container">
+  @for (product of products; track $index) {
+  <div class="card" style="flex-basis: 25%; margin: 10px">
+    <div style="padding: 12px">
+      <div>
+        <mat-card-header>
+          <div style="text-align: center">
+            <strong style="font-weight: bold">{{ product.title }}</strong>
+          </div>
+          <div style="text-align: center">Category: {{ product.category }}</div>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="{{ product.image }}"
+          alt="Product Image"
+          style="height: 300px; width: 300px"
+        />
+        <div>
+          <p>{{ product.description }}</p>
+        </div>
+        <div>
+          <button mat-button disabled>{{ product.price }} $</button>
+          <button mat-raised-button color="primary">BUY</button>
+          <button
+            mat-raised-button
+            color="warning"
+            (click)="openDialog(product)"
+          >
+            INFO
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  }
+</div>
+ -->
